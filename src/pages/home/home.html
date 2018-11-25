@@ -8,11 +8,82 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
+  <!--<p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button secondary menuToggle>Toggle Menu</button>-->
+  <ion-card (click)="click_card1()">
+    <ion-card-header id="card1">
+      <h2 class="card-title">Card 1</h2>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-card-content>
+            This is card 1
+          </ion-card-content>
+        </ion-col>
+        <ion-col col-2>
+          <ion-icon name="arrow-dropright" style="font-size: 40px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card (click)="click_card2()">
+    <ion-card-header id="card2">
+      <h2 class="card-title">Card 2</h2>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-card-content>
+            This is card 2
+          </ion-card-content>
+        </ion-col>
+        <ion-col col-2>
+          <ion-icon name="arrow-dropright" style="font-size: 40px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card (click)="click_card3()">
+    <ion-card-header id="card3">
+      <h2 class="card-title">Card 3</h2>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-card-content>
+            This is card 3
+          </ion-card-content>
+        </ion-col>
+        <ion-col col-2>
+          <ion-icon name="arrow-dropright" style="font-size: 40px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card (click)="click_card4()">
+    <ion-card-header id="card4">
+      <h2 class="card-title">Card 4</h2>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-card-content>
+            This is card 4
+          </ion-card-content>
+        </ion-col>
+        <ion-col col-2>
+          <ion-icon name="arrow-dropright" style="font-size: 40px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
 </ion-content>
