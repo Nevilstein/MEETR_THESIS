@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import firebase from 'firebase';
-import { Firebase } from '@ionic-native/firebase';
-import { Facebook } from '@ionic-native/facebook';
+import firebase from 'firebase';
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,27 +15,22 @@ import { Facebook } from '@ionic-native/facebook';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public facebook: Facebook) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  facebookLogin(): Promise<any> {
-    return this.facebook.login(['email']);
-    /*
-    .then( response => {
-      const facebookCredential = firebase.auth.FacebookAuthProvider
-        .credential(response.authResponse.accessToken);
-
-      firebase.auth().signInWithCredential(facebookCredential)
-        .then( success => { 
-          console.log("Firebase success: " + JSON.stringify(success)); 
-        });
-
-    }).catch((error) => { console.log(error) });
-    */
+  facebookLogin(){
+    let provider = new firebase.auth.FacebookAuthProvider();  
+    firebase.auth().signInWithRedirect(provider).then(()=>{
+      firebase.auth().getRedirectResult().then((result)=>{
+        alert(JSON.stringify(result));
+      }).catch(function(error){
+        alert(JSON.stringify(error))
+      });
+    })  
   }
 
 }
