@@ -9,13 +9,9 @@ import { TestPage } from '../pages/test/test';
 import { SettingPage } from '../pages/setting/setting';
 import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
-<<<<<<< HEAD
-=======
 import { UserPage } from '../pages/user/user';
 import { UsereditPage } from '../pages/useredit/useredit';
 import {UsersettingPage} from '../pages/usersetting/usersetting';
->>>>>>> 4b32c90... user page
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {Facebook} from '@ionic-native/facebook';
@@ -39,14 +35,10 @@ firebase.initializeApp(firebaseConfig)
     TestPage,
     SettingPage,
     AboutPage,
-<<<<<<< HEAD
-    LoginPage
-=======
     LoginPage,
     UserPage,
     UsereditPage,
     UsersettingPage
->>>>>>> 4b32c90... user page
   ],
   imports: [
     BrowserModule,
@@ -60,14 +52,10 @@ firebase.initializeApp(firebaseConfig)
     TestPage,
     SettingPage,
     AboutPage,
-<<<<<<< HEAD
-    LoginPage
-=======
     LoginPage,
     UserPage,
     UsereditPage,
     UsersettingPage
->>>>>>> 4b32c90... user page
   ],
   providers: [
     StatusBar,

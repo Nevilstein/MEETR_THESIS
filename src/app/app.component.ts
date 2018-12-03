@@ -9,17 +9,10 @@ import { TestPage } from '../pages/test/test';
 import { SettingPage } from '../pages/setting/setting';
 import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
-<<<<<<< HEAD
-
-@Component({
-  templateUrl: 'app.html'
-=======
 import { UsereditPage } from '../pages/useredit/useredit';
 import {UsersettingPage} from '../pages/usersetting/usersetting';
-
 @Component({
   templateUrl: 'app.html' 
->>>>>>> 4b32c90... user page
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
