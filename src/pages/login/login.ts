@@ -1,7 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Facebook} from '@ionic-native/facebook';
+<<<<<<< HEAD
 import firebase from 'firebase';
+=======
+import firebase from 'firebase';  
+import { HomePage } from '../home/home';
+import { UserPage } from '../user/user';
+
+>>>>>>> 4b32c90... user page
 /**
  * Generated class for the LoginPage page.
  *
@@ -43,5 +50,15 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }  
+<<<<<<< HEAD
+=======
+  gotoAdmin(){
+    this.navCtrl.setRoot(HomePage);
+  }
+  gotoUser(){
+
+    this.navCtrl.setRoot(UserPage);
+  }
+>>>>>>> 4b32c90... user page
 }
 
