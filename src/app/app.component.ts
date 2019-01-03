@@ -3,12 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home'; //also the admin page, surprisingly hahaha
 import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/test/test';
 import { SettingPage } from '../pages/setting/setting';
 import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
+import { UserPage } from '../pages/user/user';
 import { UsereditPage } from '../pages/useredit/useredit';
 import {UsersettingPage} from '../pages/usersetting/usersetting';
 @Component({
@@ -30,9 +31,9 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Test', component: TestPage },
       { title: 'Setting', component: SettingPage },
+      { title: 'User', component: UserPage },
       { title: 'About', component: AboutPage }
     ];
-
   }
 
   initializeApp() {

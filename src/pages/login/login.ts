@@ -11,7 +11,7 @@ import { UserPage } from '../user/user';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage()  
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -20,6 +20,8 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public facebook:Facebook, public navParams: NavParams ) {
   }
+
+  //FACEBOOK Login, working on Android Emulator, but not on ionic serve
   facebookLogin(){
     this.facebook.login(['email']).then(res=>{
       const fbcredential = firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken)
@@ -32,6 +34,8 @@ export class LoginPage {
         alert(JSON.stringify(error))
     })
   }
+  
+  //DO NOT DELETE, Reference siya sa fb login ko
     /*
     let provider = new firebase.auth.FacebookAuthProvider();  
     firebase.auth().signInWithRedirect(provider).then(()=>{
@@ -42,6 +46,9 @@ export class LoginPage {
       });
     })
     */
+  ///////////////////////////////////////////////
+
+  // REDIRECTS
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }  
@@ -49,7 +56,6 @@ export class LoginPage {
     this.navCtrl.setRoot(HomePage);
   }
   gotoUser(){
-
     this.navCtrl.setRoot(UserPage);
   }
 }
